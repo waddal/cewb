@@ -1,6 +1,5 @@
 :root {
-  --degree: 0;
-  --rotation: 0;
+  --rotation: 0, 0, 0, 0deg;
   font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
   font-size: 12px;
   background-color: #212121;
@@ -34,36 +33,13 @@ body {
 .box {
   height: 250px;
   width: 250px;
-  /* position: absolute; */
   top: 100px;
   left: 100px;
   transform-style: preserve-3d;
-
   transform: rotate3d(var(--rotation));
   transition: all 1s;
-  /* transform: rotate3d(var(--rotation)); */
-  /* transform: rotateY(var(--degree)); */
-  /* animation: animate 5s infinite; */
+  z-index: 999;
 }
-
-/* 
-@keyframes animate {
-  0% {
-    transform: rotateX(45deg) rotateY(-45deg);
-  }
-  25% {
-    transform: rotateX(-45deg) rotateY(45deg);
-  }
-  50% {
-    transform: rotateX(45deg) rotateY(45deg);
-  }
-  75% {
-    transform: rotateX(-45deg) rotateY(45deg);
-  }
-  100% {
-    transform: rotateX(45deg) rotateY(-45deg);
-  }
-} */
 
 .card {
   display: flex;
@@ -87,8 +63,7 @@ body {
 }
 
 #back {
-  transform: translateZ(-125px)
-  rotateY(180deg)
+  transform: translateZ(-125px) rotateY(180deg);
 }
 
 #left {
@@ -112,7 +87,7 @@ body {
 }
 
 #selected {
-  transform: translateZ(110px);
+  transform: translateZ(100px);
   background-color: rgb(162, 44, 44);
   cursor: pointer;
 }
@@ -125,6 +100,7 @@ body {
   justify-content: space-around;
   width: 100%;
 }
+
 .Ycontrols {
   position: absolute;
   top: 0;
@@ -139,4 +115,21 @@ button {
   height: 50px;
   bottom: 20px;
   border-radius: 8px;
+}
+
+.arrowControlsX {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.arrowControlsY {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
 }

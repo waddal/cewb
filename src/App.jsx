@@ -23,48 +23,56 @@ function App() {
           back
         </div>
         <div className="card" id="left">
-          left
+          socials
         </div>
         <div className="card" id="right">
-          right
+          skills
         </div>
         <div className="card" id="top">
           top
         </div>
         <div className="card" id="bottom">
-          bottom
+          <div className="projectsContainer">
+            <header>
+              <p>Projects</p>
+            </header>
+            <section className="projectsList">
+              <div className="projectItem">RLxP</div>
+              <div className="projectItem">EcoBoss</div>
+              <div className="projectItem">GottLove</div>
+            </section>
+          </div>
         </div>
       </div>
 
-
       <div className="arrowControlsX">
-        <button className="arrowLeft" onMouseEnter={() => handleRotate(`0, 1, 0, 90deg`)}>👈</button>
-        <button className="arrowRight" onMouseEnter={() => handleRotate(`0, 1, 0, -90deg`)}>👉</button>
+        <div
+          className="arrow"
+          onMouseEnter={() => handleRotate(`0, 1, 0, 90deg`)}
+        >
+          👈
+        </div>
+        <div
+          className="arrow"
+          onMouseEnter={() => handleRotate(`0, 1, 0, -90deg`)}
+        >
+          👉
+        </div>
       </div>
       <div className="arrowControlsY">
-        <button className="arrowUp" onMouseEnter={() => handleRotate(`1, 0, 0, 90deg`)}>🙌</button>
-        <button className="arrowDown" onMouseEnter={() => handleRotate(`0, 0, 0, 0deg`)}>🙏</button>
+        <div
+          className="arrow"
+          onMouseEnter={() => handleRotate(`1, 0, 0, 90deg`)}
+        >
+          🙌
+        </div>
+        <div
+          className="arrow"
+          onMouseEnter={() => handleRotate(`0, 0, 0, 0deg`)}
+        >
+          🙏
+        </div>
       </div>
-
-
-      {/* <div className="Xcontrols">
-        <button onClick={() => handleRotate(`0, 1, 0, 180deg`)}>back</button>
-        <button onClick={() => handleRotate(`0, 1, 0, 135deg`)}>peek left back</button>
-        <button onClick={() => handleRotate(`0, 1, 0, 90deg`)}>left</button>
-        <button onClick={() => handleRotate(`0, 1, 0, 45deg`)}>peek left</button>
-        <button onClick={() => handleRotate(`0, 1, 0, 0deg`)}>front</button>
-        <button onClick={() => handleRotate(`0, 1, 0, -45deg`)}>peek right</button>
-        <button onClick={() => handleRotate(`0, 1, 0, -90deg`)}>right</button>
-        <button onClick={() => handleRotate(`0, 1, 0, -135deg`)}>peek right back</button>
-        <button onClick={() => handleRotate(`0, 1, 0, -180deg`)}>back</button>
-      </div>
-      <div className="Ycontrols">
-        <button onClick={() => handleRotate(`1, 0, 0, -90deg`)}>top</button>
-        <button onClick={() => handleRotate(`1, 0, 0, -45deg`)}>peek top</button>
-        <button onClick={() => handleRotate(`1, 0, 0, 0deg`)}>center</button>
-        <button onClick={() => handleRotate(`1, 0, 0, 45deg`)}>peek bottom</button>
-        <button onClick={() => handleRotate(`1, 0, 0, 90deg`)}>bottom</button>
-      </div> */}
     </div>
   );
 }

@@ -22,7 +22,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 80vh;
-  width: 30vw;
+  width: 50vw;
   position: absolute;
   top: 50vh;
   left: 50vw;
@@ -43,10 +43,10 @@ body {
 
 .card {
   display: flex;
-  height: 250px;
-  width: 250px;
   align-items: center;
   justify-content: center;
+  height: 250px;
+  width: 250px;
   background-color: rgb(19, 19, 18);
   border: 1px solid gold;
   box-sizing: border-box;
@@ -55,7 +55,7 @@ body {
 }
 
 .card:hover {
-  cursor: pointer;
+  cursor: default;
 }
 
 #front {
@@ -123,6 +123,7 @@ button {
   align-items: center;
   justify-content: space-between;
   width: 100%;
+  cursor: default;
 }
 
 .arrowControlsY {
@@ -132,4 +133,62 @@ button {
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
+  cursor: default;
+}
+
+.arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  width: 100px;
+}
+
+.hint {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* PROJECTS */
+.projectsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 93%;
+  width: 93%;
+  background-color: hotpink;
+}
+
+.projectsContainer header {
+  color: aliceblue;
+  font-weight: 666;
+  border-bottom: 1px solid white;
+  padding: 6px 0%;
+  margin: 6px 0%;
+}
+
+.projectsList {
+  flex: 11;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+}
+
+.projectItem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 75px;
+  height: 35px;
+  background-color: greenyellow;
+  color: #212121;
+  border: 1px solid #212121;
+  margin: 8px;
+}
+
+.projectItem:hover {
+  background-color: aquamarine;
+  cursor: pointer;
 }

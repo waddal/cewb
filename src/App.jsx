@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 function App() {
   const [rotation, setRotation] = useState(0);
+  const [content, setContent] = useState("🏠");
 
   const [selected, setSelected] = useState("front");
   const handleFront = () => {
@@ -17,7 +18,14 @@ function App() {
     <div className="container">
       <div className="box" id="box" style={{ "--rotation": `${rotation}` }}>
         <div onClick={handleFront} className={`card`} id={`${selected}`}>
-          🏠
+          {selected === "front" ? (
+            content
+          ) : (
+            <div className="aboutContainer">
+              <header>who r u?</header>
+              <section>hi im a monkey oo oo ah aha</section>
+            </div>
+          )}
         </div>
         <div className="card" id="back">
           back

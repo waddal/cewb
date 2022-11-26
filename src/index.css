@@ -88,7 +88,7 @@ body {
 
 #selected {
   transform: translateZ(100px);
-  background-color: rgb(162, 44, 44);
+  border: 3px dotted rgb(234, 232, 232);
   cursor: pointer;
 }
 

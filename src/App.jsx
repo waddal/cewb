@@ -2,9 +2,8 @@ import React, { useState } from "react";
 
 function App() {
   const [rotation, setRotation] = useState(0);
-  const [content, setContent] = useState("🏠");
-
   const [selected, setSelected] = useState("front");
+  
   const handleFront = () => {
     selected === "front" ? setSelected("selected") : setSelected("front");
   };
@@ -19,7 +18,7 @@ function App() {
       <div className="box" id="box" style={{ "--rotation": `${rotation}` }}>
         <div onClick={handleFront} className={`card`} id={`${selected}`}>
           {selected === "front" ? (
-            content
+            "🏠"
           ) : (
             <div className="aboutContainer">
               <header>who r u?</header>
@@ -34,7 +33,25 @@ function App() {
           socials
         </div>
         <div className="card" id="right">
-          skills
+          {/* skills */}
+          <div className="skillsContainer">
+            <header>
+              <p>Skills</p>
+            </header>
+            <section className="skillsList">
+              <div>🌐 Languages: JavaScript, TypeScript, SQL, HTML5, CSS3</div>
+
+              <div>⚙️ Frameworks: React, React Native, Express, Jest, Cypress</div>
+
+              <div>📚 Libraries: React Router, Redux, React Testing Library, PostgreSQL, SQlite, Knex.js, JWT, SuperTest, Yup, bcrypt</div>
+
+              <div>🧰 Tools: Git, Visual Studio Code, Chrome/Brave, Postman, pgAdmin, Slack, Discord, Zoom</div>
+
+              <div>📀 Platforms: Apple, Windows, iOS</div>
+
+              <div>⏫ Deployment: Netlify, Heroku, Vercel, Supabase</div>
+            </section>
+        </div>
         </div>
         <div className="card" id="top">
           top

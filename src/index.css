@@ -160,7 +160,7 @@ button {
   justify-content: center;
   height: 93%;
   width: 93%;
-  background-color: rgba(255, 105, 180, 0.768);
+  background-color: rgb(255, 105, 180);
   border: 1px solid gold;
   box-sizing: border-box;
   position: absolute;
@@ -206,4 +206,8 @@ button {
 
 .skillsList {
   font-size: 0.9rem;
+}
+
+.skillType {
+  font-weight:666;
 }

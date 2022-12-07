@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 
-function App() {
+function Block() {
   const [rotation, setRotation] = useState(0);
   const [selected, setSelected] = useState("front");
   const [combo, setCombo] = useState(0);
@@ -8,6 +9,8 @@ function App() {
   const right = `0, 1, 0, -90deg`;
   const up = `1, 0, 0, 90deg`;
   const down = `0, 0, 0, 0deg`;
+
+  const url = useParams();
 
   const handleFront = () => {
     selected === "front" ? setSelected("selected") : setSelected("front");
@@ -23,6 +26,8 @@ function App() {
   }
 
   useEffect(() => {
+    console.log(url);
+
     if (rotation === left) {
       setCombo(1);
       return;
@@ -132,4 +137,4 @@ function App() {
   );
 }
 
-export default App;
+export default Block;

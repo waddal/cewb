@@ -8,24 +8,44 @@ import Root from "./routes/Root";
 import ErrorPage from "./routes/Error";
 
 const router = createBrowserRouter([
+  // {
+  //   path: "/projects",
+  //   element: <Block face={`1, 0, 0, 90deg`}/>,
+  //   errorElement: <ErrorPage />,
+  // },
+  // {
+  //   path: "/skills",
+  //   element: <Block face={`0, 1, 0, 90deg`}/>,
+  //   errorElement: <ErrorPage />,
+  // },
+  // {
+  //   path: "/social",
+  //   element: <Block face={`0, 1, 0, -90deg`}/>,
+  //   errorElement: <ErrorPage />,
+  // },
+  // {
+  //   path: "/",
+  //   element: <Block face={`1, 0, 0, 0deg`}/>,
+  //   errorElement: <ErrorPage />,
+  // },
   {
     path: "/projects",
-    element: <Block face={`1, 0, 0, 90deg`}/>,
+    element: <Block />,
     errorElement: <ErrorPage />,
   },
   {
     path: "/skills",
-    element: <Block face={`0, 1, 0, 90deg`}/>,
+    element: <Block />,
     errorElement: <ErrorPage />,
   },
   {
     path: "/social",
-    element: <Block face={`0, 1, 0, -90deg`}/>,
+    element: <Block />,
     errorElement: <ErrorPage />,
   },
   {
     path: "/",
-    element: <Block face={`1, 0, 0, 0deg`}/>,
+    element: <Block />,
     errorElement: <ErrorPage />,
   },
   {

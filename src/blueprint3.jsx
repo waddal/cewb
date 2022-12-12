@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import AboutSection from "../Views/AboutSection";
 
-function Block() {
+function Block({ face }) {
   const [rotation, setRotation] = useState(0);
   const [selected, setSelected] = useState("front");
   const [combo, setCombo] = useState(0);
@@ -11,12 +10,24 @@ function Block() {
   const up = `1, 0, 0, 90deg`;
   const down = `0, 0, 0, 0deg`;
 
+  // how do we handle url/face switches?
+  // 1. set rotation then 'navigate' to corresponding url
+  // 2. navigate to url then rotate cube according to url   <---
+
   const url = useLocation();
   const navigate = useNavigate();
 
   const handleFront = () => {
     selected === "front" ? setSelected("selected") : setSelected("front");
   };
+
+  // function handleRotate(rot) {
+  //   setRotation(rot);
+  //   if (rot === left) navigate("/social");
+  //   if (rot === right) navigate("/skills");
+  //   if (rot === up) navigate("/projects");
+  //   if (rot === down) navigate("/");
+  // }
 
   function handleRotation(address) {
     console.log("rotating to address.. ", address);
@@ -27,6 +38,7 @@ function Block() {
   }
 
   function comboBreak() {
+    console.log("combo!");
     setRotation(`1, 0, 0, -495deg`);
     setCombo(0);
   }
@@ -53,6 +65,7 @@ function Block() {
   }, [rotation]);
 
   useEffect(() => {
+    console.log("face: ", face);
     handleRotation(url.pathname);
   }, [url]);
 
@@ -63,12 +76,12 @@ function Block() {
           {selected === "front" ? (
             "🏠"
           ) : (
-            <AboutSection />
+            <div className="aboutContainer">
+              <header>hello</header>
+              <section>🙆‍♂️</section>
+            </div>
           )}
         </div>
-
-
-
         <div className="card" id="back">
           back
         </div>
@@ -121,17 +134,21 @@ function Block() {
       </div>
 
       <div className="arrowControlsX">
+        {/* <div className="arrow" onMouseEnter={() => handleRotate(left)}> */}
         <div className="arrow" onMouseEnter={() => navigate("/social")}>
           👈
         </div>
+        {/* <div className="arrow" onMouseEnter={() => handleRotate(right)}> */}
         <div className="arrow" onMouseEnter={() => navigate("/skills")}>
           👉
         </div>
       </div>
       <div className="arrowControlsY">
+        {/* <div className="arrow" onMouseEnter={() => handleRotate(up)}> */}
         <div className="arrow" onMouseEnter={() => navigate("/projects")}>
           🙌
         </div>
+        {/* <div className="arrow" onMouseEnter={() => handleRotate(down)}> */}
         <div className="arrow" onMouseEnter={() => navigate("/")}>
           🙏
         </div>

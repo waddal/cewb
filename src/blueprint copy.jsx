@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
 
 function Block() {
   const [rotation, setRotation] = useState(0);
@@ -9,8 +8,6 @@ function Block() {
   const right = `0, 1, 0, -90deg`;
   const up = `1, 0, 0, 90deg`;
   const down = `0, 0, 0, 0deg`;
-
-  const url = useParams();
 
   const handleFront = () => {
     selected === "front" ? setSelected("selected") : setSelected("front");
@@ -26,8 +23,6 @@ function Block() {
   }
 
   useEffect(() => {
-    console.log(url);
-
     if (rotation === left) {
       setCombo(1);
       return;

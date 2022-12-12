@@ -3,19 +3,34 @@ import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import "./index.css";
-import Block from "./Block";
+import Block from "./routes/Block";
 import Root from "./routes/Root";
 import ErrorPage from "./routes/Error";
 
 const router = createBrowserRouter([
   {
-    path: "/",
-    element: <Root />,
+    path: "/projects",
+    element: <Block face={`1, 0, 0, 90deg`}/>,
     errorElement: <ErrorPage />,
   },
   {
-    path: "block",
-    element: <Block />,
+    path: "/skills",
+    element: <Block face={`0, 1, 0, 90deg`}/>,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "/social",
+    element: <Block face={`0, 1, 0, -90deg`}/>,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "/",
+    element: <Block face={`1, 0, 0, 0deg`}/>,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "root",
+    element: <Root />,
   },
 ]);
 

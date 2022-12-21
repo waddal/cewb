@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
+
 import AboutSection from "../Views/AboutSection";
+import SkillsSection from "../Views/SkillsSection";
 
 function Block() {
   const [rotation, setRotation] = useState(0);
@@ -60,14 +62,8 @@ function Block() {
     <div className="container">
       <div className="box" id="box" style={{ "--rotation": `${rotation}` }}>
         <div onClick={handleFront} className={`card`} id={`${selected}`}>
-          {selected === "front" ? (
-            "🏠"
-          ) : (
-            <AboutSection />
-          )}
+          {selected === "front" ? "🏠" : <AboutSection />}
         </div>
-
-
 
         <div className="card" id="back">
           back
@@ -76,32 +72,7 @@ function Block() {
           socials
         </div>
         <div className="card" id="right">
-          <div className="skillsContainer">
-            <header>
-              <p>Skills</p>
-            </header>
-            <section className="skillsList">
-              <div>🌐 Languages: JavaScript, TypeScript, SQL, HTML5, CSS3</div>
-
-              <div>
-                ⚙️ Frameworks: React, React Native, Express, Jest, Cypress
-              </div>
-
-              <div>
-                📚 Libraries: React Router, Redux, React Testing Library,
-                PostgreSQL, SQlite, Knex.js, JWT, SuperTest, Yup, bcrypt
-              </div>
-
-              <div>
-                🧰 Tools: Git, Visual Studio Code, Chrome/Brave, Postman,
-                pgAdmin, Slack, Discord, Zoom
-              </div>
-
-              <div>📀 Platforms: Apple, Windows, iOS</div>
-
-              <div>⏫ Deployment: Netlify, Heroku, Vercel, Supabase</div>
-            </section>
-          </div>
+          <SkillsSection />
         </div>
         <div className="card" id="top">
           top

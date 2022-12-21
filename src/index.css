@@ -203,11 +203,47 @@ button {
 
 /* SKILLS */
 .skillsContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
   padding: 6px;
+  background-color: #212121;
+}
+
+.skillsContainer header {
+  font-size: 0.7rem;
+  text-align: end;
+  border-bottom:1px salmon double;
 }
 
 .skillsList {
   font-size: 0.9rem;
+}
+
+.skill {
+  flex: 1;
+  margin: 1% 0%;
+}
+
+.languages span {
+  color: #2d7dd2;
+}
+
+.frameworks span {
+  color: #97CC04;
+}
+
+.libraries span {
+  color: #EEB902;
+}
+
+.tools span {
+  color: #F45D01;
+}
+
+.deployments span {
+  color: #c506c5;
 }
 
 .skillType {
@@ -216,7 +252,7 @@ button {
 
 /* ABOUT SECTION */
 
-.aboutSection {
+.aboutContainer {
   width: 100%;
   height: 100%;
   padding: 8px;
@@ -224,13 +260,13 @@ button {
   color: rgb(70, 128, 244);
 }
 
-.aboutSection header {
+.aboutContainer header {
   display: flex;
   width: 100%;
   height: 33%;
 }
 
-.aboutSection .userSmDetails {
+.aboutContainer .userSmDetails {
   flex: 2;
 }
 

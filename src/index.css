@@ -208,13 +208,13 @@ button {
   display: flex;
   flex-direction: column;
   padding: 6px;
-  background-color: #212121;
+  background-color: #7100e2;
 }
 
 .skillsContainer header {
   font-size: 0.7rem;
   text-align: end;
-  border-bottom:1px salmon double;
+  border-bottom: 1px salmon double;
 }
 
 .skillsList {
@@ -231,15 +231,15 @@ button {
 }
 
 .frameworks span {
-  color: #97CC04;
+  color: #97cc04;
 }
 
 .libraries span {
-  color: #EEB902;
+  color: #eeb902;
 }
 
 .tools span {
-  color: #F45D01;
+  color: #f45d01;
 }
 
 .deployments span {
@@ -250,33 +250,85 @@ button {
   font-weight: 666;
 }
 
-/* ABOUT SECTION */
+/* ABOUT */
 
 .aboutContainer {
   width: 100%;
   height: 100%;
   padding: 8px;
-  background-color: rgb(203, 214, 48);
+  background-color: rgba(64, 118, 118, 0.202);
   color: rgb(70, 128, 244);
 }
 
-.aboutContainer header {
+.aboutContainer {
   display: flex;
   width: 100%;
-  height: 33%;
+  height: 100%;
+  box-sizing: border-box;
 }
 
-.aboutContainer .userSmDetails {
-  flex: 2;
+.aboutContainer h3 {
+  align-self: flex-start;
+}
+
+.aboutLeft {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
 }
 
 .userImgContainer {
-  flex: 1;
-  width: 50%;
-  height: 100%;
+  width: 80%;
+  height: 40%;
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid black;
   background-color: aliceblue;
+}
+
+img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.aboutRight {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.motto {
+  height: 40%;
+  flex: 1;
+}
+
+.info {
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* SOCIALS */
+
+.socialsContainer {
+  background-color: rgb(148, 193, 60);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  padding: 20%;
+}
+
+.socialLink {
+  display: flex;
+  padding: 2%;
+  margin: 5%;
 }

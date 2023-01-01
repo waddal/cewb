@@ -3,6 +3,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 
 import AboutSection from "../Views/AboutSection";
 import SkillsSection from "../Views/SkillsSection";
+import SocialsSection from "../Views/SocialsSection";
 
 function Block() {
   const [rotation, setRotation] = useState(0);
@@ -69,7 +70,7 @@ function Block() {
           back
         </div>
         <div className="card" id="left">
-          socials
+          <SocialsSection />
         </div>
         <div className="card" id="right">
           <SkillsSection />

@@ -1,24 +1,27 @@
 import React from "react";
+import photo from "../assets/ma2.png";
 
 const AboutSection = () => {
   return (
     <div className="aboutContainer">
-      <header>
-        <div className="userSmDetails">
-          <h3>userNam</h3>
-        </div>
+      <section className="aboutLeft">
+        <h3>alan</h3>
 
         <div className="userImgContainer">
-          <img src="#" alt="😁" />
+          <img src={photo} alt="😁" />
         </div>
-      </header>
-      <section className="aboutParagraph">
-        <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor error
-          et quae ea, dolorem praesentium quia quaerat eaque obcaecati voluptate
-          beatae aspernatur explicabo! Quod iusto aliquam corrupti, voluptas
-          libero nam.
-        </p>
+
+        <div>pics | videos </div>
+      </section>
+
+      <section className="aboutRight">
+        <p className="motto">"great artists steal"</p>
+
+        <div className="info">
+          <span id="gender">male</span>
+          <span id="age">29</span>
+          <span id="location">Riverside, California</span>
+        </div>
       </section>
     </div>
   );

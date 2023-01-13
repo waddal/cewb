@@ -28,7 +28,7 @@ const ApiSection = () => {
 
   return (
     <div>
-      <p>display data pulled from apis like:</p>
+      {/* <p>display data pulled from apis like:</p>
       <ol>
         <li>
           <h3>fitbit</h3>
@@ -37,7 +37,8 @@ const ApiSection = () => {
         <li>geocache</li>
         <li>meetup</li>
         <li>spotify</li>
-      </ol>
+      </ol> */}
+      bb got back
     </div>
   );
 };

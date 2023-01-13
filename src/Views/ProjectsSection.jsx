@@ -10,6 +10,9 @@ const ProjectsSection = () => {
         <div className="projectItem">RLxP</div>
         <div className="projectItem">EcoBoss</div>
         <div className="projectItem">GottLove</div>
+        <div className="projectItem">Riceipes</div>
+        <div className="projectItem">ActiviTapp</div>
+        <div className="projectItem">Quizard</div>
       </section>
     </section>
   );

@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 
+import ApiSection from "../Views/ApiSection";
 import AboutSection from "../Views/AboutSection";
 import SkillsSection from "../Views/SkillsSection";
 import SocialsSection from "../Views/SocialsSection";
+import ProjectsSection from "../Views/ProjectsSection";
 
 function Block() {
   const [rotation, setRotation] = useState(0);
@@ -13,6 +15,7 @@ function Block() {
   const right = `0, 1, 0, -90deg`;
   const up = `1, 0, 0, 90deg`;
   const down = `0, 0, 0, 0deg`;
+  const back = `1, 0, 0, -540deg`;
 
   const url = useLocation();
   const navigate = useNavigate();
@@ -22,7 +25,7 @@ function Block() {
   };
 
   function handleRotation(address) {
-    console.log("rotating to address.. ", address);
+    if (address === "/back") setRotation(back);
     if (address === "/social") setRotation(left);
     if (address === "/skills") setRotation(right);
     if (address === "/projects") setRotation(up);
@@ -62,33 +65,37 @@ function Block() {
   return (
     <div className="container">
       <div className="box" id="box" style={{ "--rotation": `${rotation}` }}>
+        {/* FRONT */}
         <div onClick={handleFront} className={`card`} id={`${selected}`}>
-          {selected === "front" ? "🏠" : <AboutSection />}
+          {selected === "selected" ? "🏠" : <AboutSection />}
         </div>
 
+        {/* BACK */}
         <div className="card" id="back">
-          back
+          <div className="back">
+            <button onClick={() => navigate("/back")}>backtivate</button>
+            <ApiSection />
+          </div>
         </div>
+
+        {/* LEFT */}
         <div className="card" id="left">
           <SocialsSection />
         </div>
+
+        {/* RIGHT */}
         <div className="card" id="right">
           <SkillsSection />
         </div>
+
+        {/* TOP */}
         <div className="card" id="top">
           top
         </div>
+
+        {/* BOTTOM */}
         <div className="card" id="bottom">
-          <div className="projectsContainer">
-            <header>
-              <p>Projects</p>
-            </header>
-            <section className="projectsList">
-              <div className="projectItem">RLxP</div>
-              <div className="projectItem">EcoBoss</div>
-              <div className="projectItem">GottLove</div>
-            </section>
-          </div>
+          <ProjectsSection />
         </div>
       </div>
 

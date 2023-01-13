@@ -1,3 +1,4 @@
+import { Buffer } from "buffer";
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
@@ -6,6 +7,9 @@ import "./index.css";
 import Block from "./routes/Block";
 import Root from "./routes/Root";
 import ErrorPage from "./routes/Error";
+// window.Buffer = Buffer;
+globalThis.Buffer = Buffer;
+
 
 const router = createBrowserRouter([
   // {
@@ -28,6 +32,11 @@ const router = createBrowserRouter([
   //   element: <Block face={`1, 0, 0, 0deg`}/>,
   //   errorElement: <ErrorPage />,
   // },
+  {
+    path: "/back",
+    element: <Block />,
+    errorElement: <ErrorPage />,
+  },
   {
     path: "/projects",
     element: <Block />,

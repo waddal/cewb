@@ -19,7 +19,7 @@ const SocialsSection = () => {
         <div className="socialImg">
           <img src="" alt="🌠" />
         </div>
-        <a href="https://www.linkedin.com/in/alan-waddell/">RinkedIn</a>
+        <a href="https://www.linkedin.com/in/alan-waddell/">rinkedIn</a>
       </article>
     </section>
   );

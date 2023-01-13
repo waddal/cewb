@@ -63,7 +63,7 @@ body {
 }
 
 #back {
-  transform: translateZ(-125px) rotateY(180deg);
+  transform: translateZ(-125px) rotateX(180deg);
 }
 
 #left {
@@ -89,7 +89,7 @@ body {
 }
 
 #selected {
-  transform: translateZ(100px);
+  transform: translateZ(200px);
   border: 3px dotted rgb(234, 232, 232);
   cursor: pointer;
 }
@@ -202,13 +202,14 @@ button {
 }
 
 /* SKILLS */
+
 .skillsContainer {
   width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
   padding: 6px;
-  background-color: #7100e2;
+  background-color: #5d02b7;
 }
 
 .skillsContainer header {

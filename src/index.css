@@ -95,24 +95,6 @@ body {
 }
 
 /* CONTROLS */
-.Xcontrols {
-  position: absolute;
-  bottom: 0;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  width: 100%;
-}
-
-.Ycontrols {
-  position: absolute;
-  top: 0;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  width: 100%;
-}
-
 button {
   min-width: 50px;
   height: 50px;
@@ -202,10 +184,9 @@ button {
 }
 
 /* SKILLS */
-
 .skillsContainer {
-  width: 100%;
-  height: 100%;
+  height: 93%;
+  width: 93%;
   display: flex;
   flex-direction: column;
   padding: 6px;
@@ -252,10 +233,9 @@ button {
 }
 
 /* ABOUT */
-
 .aboutContainer {
-  width: 100%;
-  height: 100%;
+  height: 93%;
+  width: 93%;
   padding: 8px;
   background-color: rgba(64, 118, 118, 0.202);
   color: rgb(70, 128, 244);
@@ -316,11 +296,10 @@ img {
 }
 
 /* SOCIALS */
-
 .socialsContainer {
   background-color: rgb(148, 193, 60);
-  width: 100%;
-  height: 100%;
+  height: 93%;
+  width: 93%;
   display: flex;
   align-items: flex-start;
   justify-content: center;
@@ -333,3 +312,57 @@ img {
   padding: 2%;
   margin: 5%;
 }
+
+/* API */
+.apiContainer {
+  background-color:khaki;
+  height: 93%;
+  width: 93%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+  flex-direction: column;
+  padding: 10%;
+}
+
+.apiContainer header {
+  color: black;
+  font-weight: 666;
+  padding: 6px 0%;
+  margin: 6px 0%;
+}
+
+.levelBar {
+  width: 90%;
+  height: 10%;
+  border: 1px solid black;
+  background-color: lightgray;
+  margin: 5%;
+  display: flex;
+}
+
+.skills {
+  padding-left: 1%;
+  color: black;
+}
+
+.hp {
+  width: 80%;
+  background-color: crimson;
+}
+
+.vim {
+  width: 50%;
+  background-color: green;
+}
+
+.str {
+  width: 30%;
+  background-color: orange;
+}
+
+.int {
+  width: 60%;
+  background-color: blueviolet;
+}
+

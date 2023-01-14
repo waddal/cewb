@@ -27,8 +27,27 @@ const ApiSection = () => {
   // }, []);
 
   return (
-    <div>
-      {/* <p>display data pulled from apis like:</p>
+    <div className="apiContainer">
+      <div className="levelBar">
+        <div className="skills hp">hp</div>
+      </div>
+      <div className="levelBar">
+        <div className="skills vim">vim</div>
+      </div>
+      <div className="levelBar">
+        <div className="skills str">str</div>
+      </div>
+      <div className="levelBar">
+        <div className="skills int">int</div>
+      </div>
+    </div>
+  );
+};
+
+export default ApiSection;
+
+{
+  /* <p>display data pulled from apis like:</p>
       <ol>
         <li>
           <h3>fitbit</h3>
@@ -37,10 +56,5 @@ const ApiSection = () => {
         <li>geocache</li>
         <li>meetup</li>
         <li>spotify</li>
-      </ol> */}
-      bb got back
-    </div>
-  );
-};
-
-export default ApiSection;
+      </ol> */
+}

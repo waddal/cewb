@@ -72,10 +72,7 @@ function Block() {
 
         {/* BACK */}
         <div className="card" id="back">
-          <div className="back">
-            <button onClick={() => navigate("/back")}>backtivate</button>
-            <ApiSection />
-          </div>
+          <ApiSection />
         </div>
 
         {/* LEFT */}
@@ -98,7 +95,6 @@ function Block() {
           <ProjectsSection />
         </div>
       </div>
-
       <div className="arrowControlsX">
         <div className="arrow" onMouseEnter={() => navigate("/social")}>
           👈
